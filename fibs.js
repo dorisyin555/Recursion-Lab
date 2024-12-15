@@ -9,6 +9,9 @@ function fibonacci(n) {
     if (fibCache[n] !== undefined) {
         return fibCache[n];
     }
+    // Recursive calculation with memoization
+    fibCache[n] = fibonacci(n - 1) + fibonacci(n - 2);
+    return fibCache[n];
 }
 
 function setup() {
